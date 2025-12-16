@@ -2,9 +2,9 @@ name: CICD
 
 on:
   push:
-    branches: [ main, new_fatures_504628 ]
+    branches: [ main, new_features_504628 ]
   pull_request:
-    branches: [ main, new_fatures_504628 ]
+    branches: [ main, new_features_504628 ]
 
 jobs:
   test-ubuntu:
