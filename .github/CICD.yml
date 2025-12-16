@@ -2,9 +2,9 @@ name: СШСВ
 
 on:
   push:
-    branches: [ main, unittest ]
+    branches: [ main, new_fatures_504628 ]
   pull_request:
-    branches: [ main, unittest ]
+    branches: [ main,  new_fatures_504628 ]
 
 jobs:
   test-ubuntu:
