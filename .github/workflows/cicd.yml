@@ -1,0 +1,70 @@
+name: CICD
+
+on:
+  push:
+    branches: [ main, new_fatures_504628 ]
+  pull_request:
+    branches: [ main, new_fatures_504628 ]
+
+jobs:
+  test-ubuntu:
+    name: Run Tests on Ubuntu
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Display Python version
+      run: python --version
+    
+    - name: Run circle.py tests
+      run: python -m unittest circle.py -v
+    
+    - name: Run square.py tests
+      run: python -m unittest square.py -v
+    
+    - name: Run rectangle.py tests
+      run: python -m unittest rectangle.py -v
+    
+    - name: Run triangle.py tests
+      run: python -m unittest triangle.py -v
+    
+    - name: Run all tests with summary
+      run: python -m unittest discover -v
+
+  test-windows:
+    name: Run Tests on Windows
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Display Python version
+      run: python --version
+    
+    - name: Run circle.py tests
+      run: python -m unittest circle.py -v
+    
+    - name: Run square.py tests
+      run: python -m unittest square.py -v
+    
+    - name: Run rectangle.py tests
+      run: python -m unittest rectangle.py -v
+    
+    - name: Run triangle.py tests
+      run: python -m unittest triangle.py -v
+    
+    - name: Run all tests with summary
+      run: python -m unittest discover -v
