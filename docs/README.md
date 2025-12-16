@@ -94,3 +94,6 @@
 + `3e2f648` - added circle unit test
 + `a8f148f` - added unit test for triangle.py
 + `01c7637` - Added square unit test
+## CICD
+Добавлен CICD.yml
+ 
