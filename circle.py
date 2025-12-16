@@ -35,15 +35,15 @@ class CircleTestCase(unittest.TestCase):
     res = perimeter(78)
     self.assertEqual(res, math.pi * 156)
 
-  def test_negative_side_perimetr(self):
+  def test_negative_radius_perimetr(self):
     res = perimeter(-5)
     self.assertEqual(res, math.pi * 10)
 
-  def test_null_side_perimeter(self):
+  def test_null_radius_perimeter(self):
     res = perimeter(0)
     self.assertEqual(res, 0)
 
-  def test_rational_sides_perimeter(self):
+  def test_rational_radius_perimeter(self):
     res = perimeter(3.7)
     self.assertEqual(res, math.pi * 7.4)
 
