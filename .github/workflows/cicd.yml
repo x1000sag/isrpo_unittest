@@ -35,8 +35,6 @@ jobs:
     - name: Run triangle.py tests
       run: python -m unittest triangle.py -v
     
-    - name: Run all tests with summary
-      run: python -m unittest discover -v
 
   test-windows:
     name: Run Tests on Windows
@@ -65,6 +63,3 @@ jobs:
     
     - name: Run triangle.py tests
       run: python -m unittest triangle.py -v
-    
-    - name: Run all tests with summary
-      run: python -m unittest discover -v
